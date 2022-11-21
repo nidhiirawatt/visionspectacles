@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <link rel="icon" href="images/favicon.png" type="image/gif" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title> vision </title>
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  <!-- font awesome style -->
+  <link href="css/font-awesome.min.css" rel="stylesheet" />
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+
+  <link href="assets/css/login-register.css" rel="stylesheet" />
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+
+	<script src="assets/js/jquery-1.10.2.js" type="text/javascript"></script>
+	<script src="assets/js/bootstrap.js" type="text/javascript"></script>
+	<script src="assets/js/login-register.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+
+  <!-- header section strats -->
+  <header class="innerpage_header header_section">
+    <div class="container-fluid">
+      <nav class="navbar navbar-expand-lg custom_nav-container">
+        <a class="navbar-brand" href="index.html">
+          <span>
+            vision
+          </span>
+        </a>
+        <div class="" id="">
+
+          <div class="custom_menu-btn">
+            <button onclick="openNav()">
+              <span class="s-1"> </span>
+              <span class="s-2"> </span>
+              <span class="s-3"> </span>
+            </button>
+            <div id="myNav" class="overlay">
+              <div class="overlay-content">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="shop.html">Shop</a>
+                <a href="blog.html">Blog</a>
+                <a class="btn big-login" data-toggle="modal" href="javascript:void(0)" onclick="openLoginModal();">Log in</a>
+                 <a class="btn big-register" data-toggle="modal" href="javascript:void(0)" onclick="openRegisterModal();">Register</a></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </nav>
+    </div>
+  </header>
+  <!-- end header section -->
+
+   <!--MOdal-->
+   <div class="modal fade login" id="loginModal">
+    <div class="modal-dialog login animated">
+        <div class="modal-content">
+           <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                  <centre><h4 class="modal-title">Login with</h4></centre>
+              </div>
+              <div class="modal-body">
+                  <div class="box">
+                       <div class="content">
+                          <div class="social">
+                              <a class="circle github" href="#">
+                                  <i class="fa fa-phone fa-fw"></i>
+                              </a>
+                              <a id="google_login" class="circle google" href="#">
+                                  <i class="fa fa-google-plus fa-fw"></i>
+                              </a>
+                              <a id="facebook_login" class="circle facebook" href="#">
+                                  <i class="fa fa-facebook fa-fw"></i>
+                              </a>
+                          </div>
+                          <div class="division">
+                              <div class="line l"></div>
+                                <span>or</span>
+                              <div class="line r"></div>
+                          </div>
+                          <div class="error"></div>
+                          <div class="form loginBox">
+                              <form method="" action="" accept-charset="UTF-8">
+                              <input id="email" class="form-control" type="text" placeholder="Email" name="email">
+                              <input id="password" class="form-control" type="password" placeholder="Password" name="password">
+                              <center><input class="btn-primary btn-default btn-login" type="button" value="Login" onclick="loginAjax()"></center>
+                              </form>
+                          </div>
+                       </div>
+                  </div>
+                  <div class="box">
+                      <div class="content registerBox" style="display:none;">
+                       <div class="form">
+                          <form method="" html="{:multipart=>true}" data-remote="true" action="" accept-charset="UTF-8">
+                          <input id="email" class="form-control" type="text" placeholder="Email" name="email">
+                          <input id="password" class="form-control" type="password" placeholder="Password" name="password">
+                          <input id="password_confirmation" class="form-control" type="password" placeholder="Repeat Password" name="password_confirmation">
+                          <center><input class="btn-primary btn-default btn-register" type="button" value="Create account" name="commit"></center>
+                          </form>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="modal-footer">
+                  <div class="forgot login-footer">
+                      <span>Looking to
+                           <a href="javascript: showRegisterForm();">create an account</a>
+                      ?</span>
+                  </div>
+                  <div class="forgot register-footer" style="display:none">
+                       <span>Already have an account?</span>
+                       <a href="javascript: showLoginForm();">Login</a>
+                  </div>
+              </div>
+        </div>
+    </div>
+</div>
+</div>
+<!--<script type="text/javascript">
+$(document).ready(function(){
+  openLoginModal();
+});
+</script>-->
+
+  <!-- shop section -->
+
+  <section class="shop_section layout_padding">
+    <div class="container">
+      <div class="heading_container heading_center">
+        <h2>
+          Men section
+        </h2>
+      </div>
+      <div class="row">
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="box">
+            <div>
+              <div class="img-box">
+                <img src="images/p1.png" alt="">
+              </div>
+              <div class="detail-box">
+                <a href="">
+                  Aviator Glasses
+                </a>
+                <h6>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star-half-empty" aria-hidden="true"></i>
+                </h6>
+                <h6>
+                  $200
+                </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="box">
+            <div>
+              <div class="img-box">
+                <img src="images/p2.png" alt="">
+              </div>
+              <div class="detail-box">
+                <a href="">
+                  Aviator Glasses
+                </a>
+                <h6>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star-half-empty" aria-hidden="true"></i>
+                </h6>
+                <h6>
+                  $175
+                </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="box">
+            <div>
+              <div class="img-box">
+                <img src="images/p3.png" alt="">
+              </div>
+              <div class="detail-box">
+                <a href="">
+                  Aviator Glasses
+                </a>
+                <h6>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star-half-empty" aria-hidden="true"></i>
+                </h6>
+                <h6>
+                  $190
+                </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="box">
+            <div>
+              <div class="img-box">
+                <img src="images/p4.png" alt="">
+              </div>
+              <div class="detail-box">
+                <a href="">
+                  Aviator Glasses
+                </a>
+                <h6>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star-half-empty" aria-hidden="true"></i>
+                </h6>
+                <h6>
+                  $155
+                </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="box">
+            <div>
+              <div class="img-box">
+                <img src="images/p5.png" alt="">
+              </div>
+              <div class="detail-box">
+                <a href="">
+                  Aviator Glasses
+                </a>
+                <h6>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star-half-empty" aria-hidden="true"></i>
+                </h6>
+                <h6>
+                  $185
+                </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="box">
+            <div>
+              <div class="img-box">
+                <img src="images/p6.png" alt="">
+              </div>
+              <div class="detail-box">
+                <a href="">
+                  Aviator Glasses
+                </a>
+                <h6>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star-half-empty" aria-hidden="true"></i>
+                </h6>
+                <h6>
+                  $170
+                </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="box">
+            <div>
+              <div class="img-box">
+                <img src="images/p7.png" alt="">
+              </div>
+              <div class="detail-box">
+                <a href="">
+                  Aviator Glasses
+                </a>
+                <h6>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star-half-empty" aria-hidden="true"></i>
+                </h6>
+                <h6>
+                  $200
+                </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="box">
+            <div>
+              <div class="img-box">
+                <img src="images/p8.png" alt="">
+              </div>
+              <div class="detail-box">
+                <a href="">
+                  Aviator Glasses
+                </a>
+                <h6>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star-half-empty" aria-hidden="true"></i>
+                </h6>
+                <h6>
+                  $180
+                </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="box">
+            <div>
+              <div class="img-box">
+                <img src="images/p9.jpg" alt="">
+              </div>
+              <div class="detail-box">
+                <a href="">
+                  Cateye Glasses
+                </a>
+                <h6>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star-half-empty" aria-hidden="true"></i>
+                </h6>
+                <h6>
+                  $200
+                </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="box">
+            <div>
+              <div class="img-box">
+                <img src="images/p10.jpg" alt="">
+              </div>
+              <div class="detail-box">
+                <a href="">
+                  Cateye Glasses
+                </a>
+                <h6>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star-half-empty" aria-hidden="true"></i>
+                </h6>
+                <h6>
+                  $175
+                </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="box">
+            <div>
+              <div class="img-box">
+                <img src="images/p11.jpg" alt="">
+              </div>
+              <div class="detail-box">
+                <a href="">
+                  Cateye Glasses
+                </a>
+                <h6>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star-half-empty" aria-hidden="true"></i>
+                </h6>
+                <h6>
+                  $190
+                </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="box">
+            <div>
+              <div class="img-box">
+                <img src="images/p12.jpg" alt="">
+              </div>
+              <div class="detail-box">
+                <a href="">
+                  Cateye Glasses
+                </a>
+                <h6>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star-half-empty" aria-hidden="true"></i>
+                </h6>
+                <h6>
+                  $155
+                </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="box">
+            <div>
+              <div class="img-box">
+                <img src="images/p13.jpg" alt="">
+              </div>
+              <div class="detail-box">
+                <a href="">
+                  Cateye Glasses
+                </a>
+                <h6>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star-half-empty" aria-hidden="true"></i>
+                </h6>
+                <h6>
+                  $185
+                </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="box">
+            <div>
+              <div class="img-box">
+                <img src="images/p14.jpg" alt="">
+              </div>
+              <div class="detail-box">
+                <a href="">
+                  Cateye Glasses
+                </a>
+                <h6>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star-half-empty" aria-hidden="true"></i>
+                </h6>
+                <h6>
+                  $170
+                </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="box">
+            <div>
+              <div class="img-box">
+                <img src="images/p15.jpg" alt="">
+              </div>
+              <div class="detail-box">
+                <a href="">
+                  Cateye Glasses
+                </a>
+                <h6>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star-half-empty" aria-hidden="true"></i>
+                </h6>
+                <h6>
+                  $200
+                </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="box">
+            <div>
+              <div class="img-box">
+                <img src="images/p16.jpg" alt="">
+              </div>
+              <div class="detail-box">
+                <a href="">
+                  Cateye Glasses
+                </a>
+                <h6>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star-half-empty" aria-hidden="true"></i>
+                </h6>
+                <h6>
+                  $180
+                </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="box">
+            <div>
+              <div class="img-box">
+                <img src="images/p17.jpg" alt="">
+              </div>
+              <div class="detail-box">
+                <a href="">
+                  Wayfarer Glasses
+                </a>
+                <h6>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star-half-empty" aria-hidden="true"></i>
+                </h6>
+                <h6>
+                  $200
+                </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="box">
+            <div>
+              <div class="img-box">
+                <img src="images/p18.jpg" alt="">
+              </div>
+              <div class="detail-box">
+                <a href="">
+                  Wayfarer Glasses
+                </a>
+                <h6>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star-half-empty" aria-hidden="true"></i>
+                </h6>
+                <h6>
+                  $175
+                </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="box">
+            <div>
+              <div class="img-box">
+                <img src="images/p19.jpg" alt="">
+              </div>
+              <div class="detail-box">
+                <a href="">
+                  Wayfarer Glasses
+                </a>
+                <h6>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star-half-empty" aria-hidden="true"></i>
+                </h6>
+                <h6>
+                  $190
+                </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="box">
+            <div>
+              <div class="img-box">
+                <img src="images/p20.jpg" alt="">
+              </div>
+              <div class="detail-box">
+                <a href="">
+                  Wayfarer Glasses
+                </a>
+                <h6>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star-half-empty" aria-hidden="true"></i>
+                </h6>
+                <h6>
+                  $155
+                </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="box">
+            <div>
+              <div class="img-box">
+                <img src="images/p21.jpg" alt="">
+              </div>
+              <div class="detail-box">
+                <a href="">
+                  Wayfarer Glasses
+                </a>
+                <h6>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star-half-empty" aria-hidden="true"></i>
+                </h6>
+                <h6>
+                  $185
+                </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="box">
+            <div>
+              <div class="img-box">
+                <img src="images/p22.jpg" alt="">
+              </div>
+              <div class="detail-box">
+                <a href="">
+                  Wayfarer Glasses
+                </a>
+                <h6>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star-half-empty" aria-hidden="true"></i>
+                </h6>
+                <h6>
+                  $170
+                </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="box">
+            <div>
+              <div class="img-box">
+                <img src="images/p23.jpg" alt="">
+              </div>
+              <div class="detail-box">
+                <a href="">
+                  Wayfarer Glasses
+                </a>
+                <h6>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star-half-empty" aria-hidden="true"></i>
+                </h6>
+                <h6>
+                  $200
+                </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="box">
+            <div>
+              <div class="img-box">
+                <img src="images/p24.jpg" alt="">
+              </div>
+              <div class="detail-box">
+                <a href="">
+                  Wayfarer Glasses
+                </a>
+                <h6>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star-half-empty" aria-hidden="true"></i>
+                </h6>
+                <h6>
+                  $180
+                </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      
+  </section>
+
+
+
+  
+
+  <!-- end shop section -->
+
+  <!-- info section -->
+
+  <section class="info_section ">
+    <div class="container-fluid">
+      <div class="row info_main_row">
+        <div class="col-lg-7 mx-auto">
+          <div class="row">
+            <div class="col-md-4 info-col">
+              <div class="info_detail">
+                <h4>
+                  About
+                </h4>
+                <p>
+                  ‘VISION’ was established in 2016 with an unmistakable concentration to furnish better vision to millions with quality eyewear.
+                </p>
+                <div class="info_social">
+                  <a href="">
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                  </a>
+                  <a href="">
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                  </a>
+                  <a href="">
+                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                  </a>
+                  <a href="">
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 info-col">
+              <div class="info_contact">
+                <h4>
+                  Reach at..
+                </h4>
+                <div class="contact_link_box">
+                  <a href="">
+                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                    <span>
+                      Location
+                    </span>
+                  </a>
+                  <a href="">
+                    <i class="fa fa-phone" aria-hidden="true"></i>
+                    <span>
+                      Call +01 1234567890
+                    </span>
+                  </a>
+                  <a href="">
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                    <span>
+                      demo@gmail.com
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 info-col">
+              <div class="info_contact">
+                <h4>
+                  Subscribe
+                </h4>
+                <form action="#">
+                  <input type="text" placeholder="Enter email" />
+                  <button type="submit">
+                    Subscribe
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 px-0 info-col">
+          <div class="map_container">
+            <div class="map">
+              <div id="googleMap"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end info section -->
+  <!-- footer section -->
+  <footer class="footer_section">
+    <div class="container">
+      <p>
+        &copy; <span id="displayYear"></span> All Rights Reserved By
+        <a href="">VISION.co</a>
+      </p>
+    </div>
+  </footer>
+  <!-- footer section -->
+
+
+  <!-- jQery -->
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <!-- bootstrap js -->
+  <script src="js/bootstrap.js"></script>
+  <!-- custom js -->
+  <script src="js/custom.js"></script>
+  <!-- Google Map -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
+  </script>
+  <!-- End Google Map -->
+</body>
+
+</html>
