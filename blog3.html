@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <link rel="icon" href="images/favicon.png" type="image/gif" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title> vision </title>
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  <!-- font awesome style -->
+  <link href="css/font-awesome.min.css" rel="stylesheet" />
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+
+  <link href="assets/css/login-register.css" rel="stylesheet" />
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+
+	<script src="assets/js/jquery-1.10.2.js" type="text/javascript"></script>
+	<script src="assets/js/bootstrap.js" type="text/javascript"></script>
+	<script src="assets/js/login-register.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+
+  <!-- header section strats -->
+  <header class="innerpage_header header_section">
+    <div class="container-fluid">
+      <nav class="navbar navbar-expand-lg custom_nav-container">
+        <a class="navbar-brand" href="index.html">
+          <span>
+            vision
+          </span>
+        </a>
+        <div class="" id="">
+
+          <div class="custom_menu-btn">
+            <button onclick="openNav()">
+              <span class="s-1"> </span>
+              <span class="s-2"> </span>
+              <span class="s-3"> </span>
+            </button>
+            <div id="myNav" class="overlay">
+              <div class="overlay-content">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="shop.html">Shop</a>
+                <a href="blog.html">Blog</a>
+                <a class="btn big-login" data-toggle="modal" href="javascript:void(0)" onclick="openLoginModal();">Log in</a>
+                 <a class="btn big-register" data-toggle="modal" href="javascript:void(0)" onclick="openRegisterModal();">Register</a></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </nav>
+    </div>
+  </header>
+  <!-- end header section -->
+ <!--MOdal-->
+ <div class="modal fade login" id="loginModal">
+  <div class="modal-dialog login animated">
+      <div class="modal-content">
+         <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <centre><h4 class="modal-title">Login with</h4></centre>
+            </div>
+            <div class="modal-body">
+                <div class="box">
+                     <div class="content">
+                        <div class="social">
+                            <a class="circle github" href="#">
+                                <i class="fa fa-phone fa-fw"></i>
+                            </a>
+                            <a id="google_login" class="circle google" href="#">
+                                <i class="fa fa-google-plus fa-fw"></i>
+                            </a>
+                            <a id="facebook_login" class="circle facebook" href="#">
+                                <i class="fa fa-facebook fa-fw"></i>
+                            </a>
+                        </div>
+                        <div class="division">
+                            <div class="line l"></div>
+                              <span>or</span>
+                            <div class="line r"></div>
+                        </div>
+                        <div class="error"></div>
+                        <div class="form loginBox">
+                            <form method="" action="" accept-charset="UTF-8">
+                            <input id="email" class="form-control" type="text" placeholder="Email" name="email">
+                            <input id="password" class="form-control" type="password" placeholder="Password" name="password">
+                            <center><input class="btn-primary btn-default btn-login" type="button" value="Login" onclick="loginAjax()"></center>
+                            </form>
+                        </div>
+                     </div>
+                </div>
+                <div class="box">
+                    <div class="content registerBox" style="display:none;">
+                     <div class="form">
+                        <form method="" html="{:multipart=>true}" data-remote="true" action="" accept-charset="UTF-8">
+                        <input id="email" class="form-control" type="text" placeholder="Email" name="email">
+                        <input id="password" class="form-control" type="password" placeholder="Password" name="password">
+                        <input id="password_confirmation" class="form-control" type="password" placeholder="Repeat Password" name="password_confirmation">
+                        <center><input class="btn-primary btn-default btn-register" type="button" value="Create account" name="commit"></center>
+                        </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="forgot login-footer">
+                    <span>Looking to
+                         <a href="javascript: showRegisterForm();">create an account</a>
+                    ?</span>
+                </div>
+                <div class="forgot register-footer" style="display:none">
+                     <span>Already have an account?</span>
+                     <a href="javascript: showLoginForm();">Login</a>
+                </div>
+            </div>
+      </div>
+  </div>
+</div>
+</div>
+<!--<script type="text/javascript">
+$(document).ready(function(){
+openLoginModal();
+});
+</script>-->
+
+
+<div class="container my-4">
+    <div class="row featurette d-flex justify-content-center align-items-center">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">Experiencing Headache with Glasses?  <span class="text-muted">Here’s What’s Happening.</span></h2>
+        <p class="lead">
+           
+            Our eyes and their muscles are one of the most sensitive organs of our body, which is why they require the highest amount of care and maintenance, especially when they have focal errors or need corrective lenses. How our eyes function depends on the external stimulus, they are subjected to. When they are getting used to new environments, they may exhibit some momentary discomfort, or when they are exhausted, they may feel irritated and dry.</p>
+      </div>
+      <div class="col-md-5">
+        <img alt="img" class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500" style="width: 500px; height: 500px;" src="images/blog3_a.jpg" data-holder-rendered="true">
+      </div>
+    </div>
+    <hr class="featurette-divider">
+    <div class="row featurette d-flex justify-content-center align-items-center">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading">Main reasons, <span class="text-muted">Why is it happening?</span></h2>
+        <p class="lead">
+            <h6>Eye Strain</h6>
+            
+            There can be many reasons a person may start having a headache with glasses, even with the right prescription. A stressful and demanding lifestyle that may cause you to spend long hours working through the night with little sleep and prolonged blue light exposure are always one of the most common reasons for a headache.</p>
+            <h6>Headache with Glasses</h6>
+
+            Eye strain also occurs when we transition to a new pair of glasses, even when they come with a prescription to improve our visual acuity. This is when a headache with glasses is the most common because the ciliary muscles within the eyes now must navigate a completely different depth of vision and focal field. As aforementioned, our eyes are extremely sensitive to change, which is why glasses change always results in eye strain and uncomfortable headaches.        
+      
+        </div>
+      <div class="col-md-5 order-md-1">
+        <img alt="img" class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500" src="images/blog3_b.jpg" data-holder-rendered="true" style="width: 500px; height: 500px;">
+      </div>
+    </div>
+    <hr class="featurette-divider">
+    <div class="row featurette d-flex justify-content-center align-items-center">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">How to Get Rid of Headaches<span class="text-muted">with glasses</span></h2>
+        <p class="lead">
+            The problems mentioned above are correctable with a new pair of glasses. Still, if your headaches are only because you have just started wearing them, the only solution is powering through them.
+        Your glasses are meant to want to break into a new pair of shoes, where the first few wears and trials will result in some pain. If you are looking to know how to get rid of headache with glasses, in this case, you can try out the following:
+
+        Start working your way with wearing them for an hour, and then try to get used to wearing them for as long as possible throughout the day. Pace yourself, and you will get used to them with little headaches.
+        If you spend time working on digital screens or over a lot of text, remember to look away every 20 minutes and focus on an object at a distance to ease your eye muscles.
+
+        To help with the lasting pain, you can use some OTC pain killers, which may relax your muscles.
+    </p>
+    
+    </div>
+      <div class="col-md-5">
+        <img alt="img" class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500" src="images/blog3_c.jpg" data-holder-rendered="true" style="width: 500px; height: 500px;">
+      </div>
+    </div>
+    
+  </div>
+<div class="container">
+    <pre>
+
+
+        
+    </pre>
+</div>
+
+    <!-- info section -->
+
+    <section class="info_section ">
+        <div class="container-fluid">
+          <div class="row info_main_row">
+            <div class="col-lg-7 mx-auto">
+              <div class="row">
+                <div class="col-md-4 info-col">
+                  <div class="info_detail">
+                    <h4>
+                      About
+                    </h4>
+                    <p>
+                      ‘VISION’ was established in 2016 with an unmistakable concentration to furnish better vision to millions with quality eyewear.
+                    </p>
+                    <div class="info_social">
+                      <a href="">
+                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                      </a>
+                      <a href="">
+                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                      </a>
+                      <a href="">
+                        <i class="fa fa-linkedin" aria-hidden="true"></i>
+                      </a>
+                      <a href="">
+                        <i class="fa fa-instagram" aria-hidden="true"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 info-col">
+                  <div class="info_contact">
+                    <h4>
+                      Reach at..
+                    </h4>
+                    <div class="contact_link_box">
+                      <a href="">
+                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                        <span>
+                          Location
+                        </span>
+                      </a>
+                      <a href="">
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                        <span>
+                          Call +01 1234567890
+                        </span>
+                      </a>
+                      <a href="">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                        <span>
+                          demo@gmail.com
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 info-col">
+                  <div class="info_contact">
+                    <h4>
+                      Subscribe
+                    </h4>
+                    <form action="#">
+                      <input type="text" placeholder="Enter email" />
+                      <button type="submit">
+                        Subscribe
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 px-0 info-col">
+              <div class="map_container">
+                <div class="map">
+                  <div id="googleMap"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+      <!-- end info section -->
+
+    <!-- footer section -->
+    <footer class="footer_section">
+        <div class="container">
+          <p>
+            &copy; <span id="displayYear"></span> All Rights Reserved By
+            <a href="">VISION.co</a>
+          </p>
+        </div>
+      </footer>
+      <!-- footer section -->
+    
+    
+      <!-- jQery -->
+      <script src="js/jquery-3.4.1.min.js"></script>
+      <!-- bootstrap js -->
+      <script src="js/bootstrap.js"></script>
+      <!-- custom js -->
+      <script src="js/custom.js"></script>
+      <!-- Google Map -->
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
+      </script>
+      <!-- End Google Map -->
+    </body>
+    
+    </html>
